@@ -1,0 +1,187 @@
+/* 
+
+CASCADING STYLESHEET
+
+*/
+/*GLOBAL*/
+
+*{
+    /*CORREÇÃO DE COMPORTAMENTO PADRÃO CSS*/
+    box-sizing: border-box;
+    
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    /*FONTE*/
+    font-family: 'Roboto', sans-serif;
+
+    /*FUNDO*/
+    background-color: #f9f9f9;
+}
+
+h1 h2{
+    color: #000000cc;
+}
+
+
+/*HEADER*/
+header button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;       /*retira borda*/
+
+    background-color: #ff4f4f;
+    Color: white;
+
+    font-weight: bold;
+
+}
+
+header p{
+    font-size: 14px;
+}
+
+
+/* TITULOS */
+
+
+header h1, main h2{
+    margin-bottom: 70px;
+}
+
+/* ESTRUTURA */
+header, main, footer {
+    /*ALINHAMENTOS DE TEXTOS*/
+    text-align: center;
+}
+
+header, .form, main {
+    /* ESPAÇAMENTOS COM MARGIN*/
+    margin: 0 auto 70px;    /*top - right/left - button*/
+    /* LIMITES DOS ELEMENTOS NA PÁGINA*/
+    width: 90%;
+    max-width: 500PX;
+}
+
+.logo{
+    width: 120px;
+    margin: 70px 0;
+}
+
+/* FORM */
+section.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+
+    align-items: center;
+
+    background-color: #ff4f4f;
+    
+    padding: 16px 64px;
+
+    border-radius: 6px;
+    
+}
+
+.form h2{
+    text-align: right;
+    color: #ffffffee;
+    font-size: 18px;
+}
+
+form input,
+form button{
+
+    /*LARGURA*/
+    width: 100%;
+
+    /*ESPAÇAMENTO*/
+    margin-bottom: 4px;
+
+    /*PREENCHIMENTO*/
+    padding: 8px 16px;
+
+    /*BORDAS*/
+    border-radius: 4px;
+    border: 1px #ffffff88 solid;
+}
+
+form input {
+    background-color: transparent;
+}
+form input::placeholder{
+    color: #ffffffaa ;
+}
+
+form button{
+    font-weight: bold;
+}
+
+/* MAIN */
+main .donors {      /*donors que esta dentro do main*/
+    display: grid;      /*modo como o conteúdo sera apresentado*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+}
+
+main h2 span{
+    color: #ff4f4f;
+}
+.blood{
+    color: #ff4f4f;
+    font-weight: bold;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    justify-content: center;
+}
+
+.blood::before{
+    content: "";
+    background-color: #ff4f4f11;
+
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+
+    /*fazer gota*/
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+}
+.donor p{
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+footer {
+    margin-top: auto;
+    padding-bottom: 16px;
+    border: 1px solid #eee;
+}
+
+section.form{
+    transition: all 300ms;
+}
+
+/*funcionalidades com JS*/
+section.form.hide{ 
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+}
